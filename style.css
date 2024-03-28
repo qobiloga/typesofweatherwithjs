@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: system-ui;
+}
+*::before, *::after {
+    box-sizing: inherit;
+}
+span, a, label {
+    display: inline-block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.all{
+    padding: 30px;
+    background-color: yellow;
+    margin: 40px;
+    min-height: 100dvh;
+    max-width: 2000px;
+    margin: auto;
+}
+
+.ground{
+    background-color: black;
+}
+.aqua{
+    color: aqua;
+}
+
+.h1{
+    text-align: center;
+}
+
+.p{
+    text-align: center;
+    font-size: 22px;
+}
+
+.imges{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+    margin:  30px 0;
+}
+
+.image{
+    width: 30%;
+    transition: 0.7s all linear;
+}
+
+.imagehidden{
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.btn{
+    padding: 8px 20px;
+    border: none;
+    font-size: 18px;
+}
+
+.btn1{
+    background-color: aqua;
+}
+
+.btn2{
+    background-color: rebeccapurple;
+    color: white;
+}
+
+
+
+.lines::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background-color: red;
+
+}
+.lines::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 100%;
+    left: 0;
+    height: 5px;
+    background-color: red;
+}
+
+
+
+
+
+.btn:hover{
+    animation: btn 0.3s infinite alternate;
+}
+
+@keyframes btn{
+    50%{
+        transform: translateX(2px) rotate(5deg);
+    }
+    100%{
+        transform: translateX(1px) rotate(0deg);
+    }
+}
+
+
+
+@media(max-width:1100px){
+    .image{
+        width: 40%;
+    }
+}
+@media(max-width:950px){
+    .image{
+        width: 45%;
+    }
+
+}
+@media(max-width:720px){
+    .image{
+        width: 50%;
+    }
+}
+@media(max-width:370px){
+    .image{
+        width: 100%;
+    }
+}
